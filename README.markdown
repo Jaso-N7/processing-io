@@ -1,0 +1,17 @@
+# Processing-Io - Getting acquainted with how to get inpot from the user and process it to produce output.
+
+## Usage
+
+## Installation
+
+## Author
+
+* Jason Robinson (jasonsrobinson@protonmail.com)
+
+## Copyright
+
+Copyright (c) 2021 Jason Robinson (jasonsrobinson@protonmail.com)
+
+## License
+
+Licensed under the BSD-3 License.
