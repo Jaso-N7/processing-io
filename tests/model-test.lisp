@@ -19,16 +19,9 @@
 
   (named "Saying Hello - Regression"
     (is= "Hello, Brian, nice to meet you!"
-	 (model:process-greeting "Brian")))
-    
-
-  (named "Saying Hello - Name always appears (unchanged) in greetings."
-    (for-all ((rando #'a-string))
-      (let* ((greetings (model:process-greeting rando))
-	     (start (position #\SPACE greetings))
-	     (end (position #\, greetings :start start)))
-	(is= rando (subseq greetings (1+ start) end)))))
-
+	 (model:process-greeting "Brian"))
+    (is= "Sorry, Gar,ba\ge, I don't think that is your actual name."
+	 (model:process-greeting "Gar,ba\ge")))
 
   )
 
