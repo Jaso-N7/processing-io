@@ -1,6 +1,7 @@
 (defpackage processing-io
   (:use :cl)
-  (:export :saying-hello))
+  (:export :saying-hello
+	   :counting-chars))
 
 (in-package :processing-io)
 
@@ -12,6 +13,10 @@
 	       name
 	       ", nice to meet you!"))
 
+(defun process-input-string (str)
+  "Determines the length of the input string STR."
+  (length str))
+
 ;;; VIEW
 
 (defun get-name ()
@@ -22,12 +27,20 @@
   "Displays a greeting GREET."
   (format nil "~A" greet))
 
+(defun get-input-string ()
+  (format t "~&What is the input string? ")
+  (read-line))
+
+(defun set-output-string (str str-len)
+  (format nil "~A has ~A characters."
+	  str str-len))
+
 ;;; CONTROLLER
 
 (defun saying-hello ()
   "Prompts a user for their name and displays a greeting."
   (greeting (process-greeting (get-name))))
 
-
-
-
+(defun counting-chars ()
+  (let ((in-str (get-input-string)))
+    (set-output-string in-str (process-input-string in-str))))
