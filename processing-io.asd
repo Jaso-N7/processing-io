@@ -5,7 +5,10 @@
   :depends-on ()
   :components ((:module "src"
                 :components
-                ((:file "main"))))
+                ((:file "packages")
+		 (:file "model" :depends-on ("packages"))
+		 (:file "view" :depends-on ("packages"))
+		 (:file "main" :depends-on ("packages" "model" "view")))))
   :description "Getting acquainted with how to get input from the user and process it to produce output."
   :in-order-to ((test-op (test-op "processing-io/tests"))))
 
@@ -16,6 +19,6 @@
                "cl-quickcheck")
   :components ((:module "tests"
                 :components
-                ((:file "main"))))
+                ((:file "model-test"))))
   :description "Test system for PROCESSING-IO"
   :perform (test-op (op c) (symbol-call :processing-io/tests/main :check!)))

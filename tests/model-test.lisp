@@ -1,8 +1,10 @@
 (defpackage processing-io/tests/main
   (:use :cl
-        :PROCESSING-IO
+        :model
         :cl-quickcheck)
-  (:export :check!))
+  (:export #:check!)
+  (:documentation "Stateless property-based testing of the MODEL."))
+
 
 (in-package :processing-io/tests/main)
 
@@ -17,16 +19,19 @@
 
   (named "Saying Hello - Regression"
     (is= "Hello, Brian, nice to meet you!"
-	 (processing-io::process-greeting "Brian")))
+	 (model:process-greeting "Brian")))
     
 
   (named "Saying Hello - Name always appears (unchanged) in greetings."
     (for-all ((rando #'a-string))
-      (let* ((greetings (processing-io::process-greeting rando))
+      (let* ((greetings (model:process-greeting rando))
 	     (start (position #\SPACE greetings))
 	     (end (position #\, greetings :start start)))
-	(is= rando (subseq greetings start end)))))
+	(is= rando (subseq greetings (1+ start) end)))))
 
 
   )
+
+(defun counting-chars-tests ()
+  (error "Not yet implemented"))
 		    

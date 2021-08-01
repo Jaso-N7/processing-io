@@ -5,9 +5,14 @@
    Getting acquainted with how to get input from the user and process it to produce output.
 
 ** Usage
-   
+   To load the system `(asdf:load-system "processing-io")`, then `(in-package :processing-io)`
+to start using the functions.
+
+For testing `(asdf:test-system "processing-io")`
+
 ** Installation
-   
+   Git clone this library to your `quicklisp\local-projects` directory and start using.
+
 ** Author
 
 + Jason Robinson (jasonsrobinson@protonmail.com)
