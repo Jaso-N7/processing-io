@@ -1,4 +1,4 @@
-(defsystem "PROCESSING-IO"
+(defsystem "processing-io"
   :version "0.1.0"
   :author "Jason Robinson"
   :license "BSD-3"
@@ -6,16 +6,16 @@
   :components ((:module "src"
                 :components
                 ((:file "main"))))
-  :description "Getting acquainted with how to get inpot from the user and process it to produce output."
-  :in-order-to ((test-op (test-op "PROCESSING-IO/tests"))))
+  :description "Getting acquainted with how to get input from the user and process it to produce output."
+  :in-order-to ((test-op (test-op "processing-io/tests"))))
 
-(defsystem "PROCESSING-IO/tests"
+(defsystem "processing-io/tests"
   :author "Jason Robinson"
   :license "BSD-3"
-  :depends-on ("PROCESSING-IO"
-               "rove")
+  :depends-on ("processing-io"
+               "cl-quickcheck")
   :components ((:module "tests"
                 :components
                 ((:file "main"))))
   :description "Test system for PROCESSING-IO"
-  :perform (test-op (op c) (symbol-call :rove :run c)))
+  :perform (test-op (op c) (symbol-call :processing-io/tests/main :check!)))
