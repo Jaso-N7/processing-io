@@ -16,4 +16,4 @@
   (:use :cl :model :view)
   (:export #:saying-hello
 	   #:counting-chars)
-  (:documentation "Displays the Views and handle events."))
+  (:documentation "Entry point for application. Displays the Views and handle events."))
