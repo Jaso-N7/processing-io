@@ -42,5 +42,10 @@
   (greeting (process-greeting (get-name))))
 
 (defun counting-chars ()
-  (let ((in-str (get-input-string)))
-    (set-output-string in-str (process-input-string in-str))))
+  (let* ((in-str (get-input-string))
+	 (len (process-input-string in-str)))
+    (if (plusp len)
+	(set-output-string in-str len)
+	(progn 
+	  (format t "You must enter something~%")
+	  (counting-chars)))))
