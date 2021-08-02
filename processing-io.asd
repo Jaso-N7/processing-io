@@ -1,14 +1,15 @@
 (defsystem "processing-io"
-  :version "0.2.0"
+  :version "0.2.1"
   :author "Jason Robinson"
   :license "BSD-3"
-  :depends-on ()
+  :depends-on ("iup")
   :components ((:module "src"
                 :components
                 ((:file "packages")
 		 (:file "model" :depends-on ("packages"))
 		 (:file "view" :depends-on ("packages"))
-		 (:file "main" :depends-on ("packages" "model" "view")))))
+		 (:file "main" :depends-on ("packages" "model" "view" "view-ui"))
+		 (:file "view-ui" :depends-on ("packages")))))
   :description "Getting acquainted with how to get input from the user and process it to produce output."
   :in-order-to ((test-op (test-op "processing-io/tests"))))
 

@@ -13,7 +13,8 @@
   (:documentation "Handles all the user interfaces and actions."))
 
 (defpackage processing-io
-  (:use :cl :model :view)
+  (:use :cl :model :view :iup)
   (:export #:saying-hello
-	   #:counting-chars)
+	   #:counting-chars
+	   #:run-count-chars)
   (:documentation "Entry point for application. Displays the Views and handle events."))
