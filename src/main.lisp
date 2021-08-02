@@ -31,6 +31,8 @@ as a result."
   (let* ((noun (display-prompt "Enter a noun: "))
 	 (verb (display-prompt "Enter a verb: "))
 	 (adj (display-prompt "Enter an adjective: "))
-	 (adv (display-prompt "Enter an adverb: ")))
-    (display-response (format nil "Do you ~A your ~A ~A ~A? That's hilarious!"
-			      verb adj noun adv))))
+	 (adv (display-prompt "Enter an adverb: "))
+	 (subj (display-prompt "Enter the subject: "))
+	 (pronoun (display-prompt "Enter a pronoun: ")))
+    (display-response (format nil "Do(es) ~A ~A ~A ~A ~A ~A? That's hilarious!"
+			      subj verb pronoun adj noun adv))))
