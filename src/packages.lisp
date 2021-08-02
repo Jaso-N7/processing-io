@@ -9,7 +9,9 @@
   (:export #:get-name
 	   #:greeting
 	   #:get-input-string
-	   #:set-output-string)
+	   #:set-output-string
+	   #:get-quote-and-author
+	   #:display-quote)
   (:documentation "Handles all the user interfaces and actions."))
 
 (defpackage processing-io
