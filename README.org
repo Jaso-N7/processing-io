@@ -5,29 +5,23 @@
    Getting acquainted with how to get input from the user and process it to produce output.
 
 ** Usage
-*** Loading the System
-Running the Graphical Interface requires IUP. I am using the CL libray by [[https://github.com/lispnik/iup/][lispnik/iup]].
-Just follow the instructions and you will be setup just fine. I cloned the git repos to
-my quicklisp/local-projects directory.
-
-To load the system `(asdf:load-system "processing-io")`, then `(in-package :processing-io)`
-to start using the functions.
-
-*** Testing the System
-For testing `(asdf:test-system "processing-io")`
-
-*** Actions
-To actually use the system, the following are exported from `processing-io` and can be run from
-the REPL:
-`(use-package :processing-io)`
-then
 
 `(saying-hello)`
 `(counting-chars)`
-`(run-count-chars)`
+`(run-count-chars) ; This runs the IUP GUI`
 
 ** Installation
-   Git clone this library to your `quicklisp\local-projects` directory and start using.
+Git clone this library to your `quicklisp\local-projects` directory.
+
+Running the Graphical Interface requires IUP. This project uses the CL libray from [[https://github.com/lispnik/iup/][lispnik/iup]].
+Just follow the instructions from there, and once they are cloned to the 
+quicklisp/local-projects directory.
+
+`CL-USER> (ql:quickload '("tecgraf-base" "pffft" "iup" "processing-io"))`
+`CL-USER> (use-package :processing-io)`
+
+*** Testing the system
+`CL-USER> (asdf:test-system "processing-io")`
 
 ** Author
 

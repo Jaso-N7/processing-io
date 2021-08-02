@@ -1,90 +1,73 @@
 
 # Table of Contents
 
-1.  [Processing-Io](#org41b19ad)
-    1.  [Introduction](#orgbe85722)
-    2.  [Usage](#org41f06b9)
-        1.  [Loading the System](#orgddc5e47)
-        2.  [Testing the System](#org6ad938c)
-        3.  [Actions](#org2138f5d)
-    3.  [Installation](#org00b9dfc)
-    4.  [Author](#org05f5675)
-    5.  [Copyright](#org5a5c1ae)
-    6.  [License](#org044014a)
+1.  [Processing-Io](#org1b17a40)
+    1.  [Introduction](#orgc560630)
+    2.  [Usage](#org1a40728)
+    3.  [Installation](#orgf5a4dc9)
+        1.  [Testing the system](#org4187e60)
+    4.  [Author](#orgf0971c6)
+    5.  [Copyright](#orgeffe826)
+    6.  [License](#orgec0a5fd)
 
 
-<a id="org41b19ad"></a>
+<a id="org1b17a40"></a>
 
 # Processing-Io
 
 
-<a id="orgbe85722"></a>
+<a id="orgc560630"></a>
 
 ## Introduction
 
 Getting acquainted with how to get input from the user and process it to produce output.
 
 
-<a id="org41f06b9"></a>
+<a id="org1a40728"></a>
 
 ## Usage
 
-
-<a id="orgddc5e47"></a>
-
-### Loading the System
-
-Running the Graphical Interface requires IUP. I am using the CL libray by [lispnik/iup](https://github.com/lispnik/iup/).
-Just follow the instructions and you will be setup just fine. I cloned the git repos to
-my quicklisp/local-projects directory.
-
-To load the system \`(asdf:load-system "processing-io")\`, then \`(in-package :processing-io)\`
-to start using the functions.
-
-
-<a id="org6ad938c"></a>
-
-### Testing the System
-
-For testing \`(asdf:test-system "processing-io")\`
-
-
-<a id="org2138f5d"></a>
-
-### Actions
-
-To actually use the system, the following are exported from \`processing-io\` and can be run from
-the REPL:
-\`(in-package :processing-io)\`
-then
-
 \`(saying-hello)\`
 \`(counting-chars)\`
-\`(run-count-chars)\`
+\`(run-count-chars) ; This runs the IUP GUI\`
 
 
-<a id="org00b9dfc"></a>
+<a id="orgf5a4dc9"></a>
 
 ## Installation
 
-Git clone this library to your \`quicklisp\local-projects\` directory and start using.
+Git clone this library to your \`quicklisp\local-projects\` directory.
+
+Running the Graphical Interface requires IUP. This project uses the CL libray from [lispnik/iup](https://github.com/lispnik/iup/).
+Just follow the instructions from there, and once they are cloned to the 
+quicklisp/local-projects directory.
+
+\`CL-USER> (ql:quickload '("tecgraf-base" "pffft" "iup" "processing-io"))\`
+\`CL-USER> (use-package :processing-io)\`
 
 
-<a id="org05f5675"></a>
+<a id="org4187e60"></a>
+
+### Testing the system
+
+\`CL-USER> (asdf:test-system "processing-io")\`
+
+
+<a id="orgf0971c6"></a>
 
 ## Author
 
 -   Jason Robinson (jasonsrobinson@protonmail.com)
 
 
-<a id="org5a5c1ae"></a>
+<a id="orgeffe826"></a>
 
 ## Copyright
 
 Copyright (c) 2021 Jason Robinson (jasonsrobinson@protonmail.com)
 
 
-<a id="org044014a"></a>
+<a id="orgec0a5fd"></a>
 
 ## License
 
