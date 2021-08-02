@@ -22,4 +22,15 @@
 (defun printing-quotes ()
   "Prompts for a quote and an author, then displays the quotation and author."
   (multiple-value-bind (q a) (get-quote-and-author)
-    (display-response (concatenate 'string q " says, " a))))
+    (display-response (concatenate 'string a " says, " q))))
+
+(defun madlib ()
+  "A simple game where you, or another player, construct a list of words and
+places them into the story (template), creating an often silly or funny story
+as a result."
+  (let* ((noun (display-prompt "Enter a noun: "))
+	 (verb (display-prompt "Enter a verb: "))
+	 (adj (display-prompt "Enter an adjective: "))
+	 (adv (display-prompt "Enter an adverb: ")))
+    (display-response (format nil "Do you ~A your ~A ~A ~A? That's hilarious!"
+			      verb adj noun adv))))

@@ -26,4 +26,5 @@
   (:export #:saying-hello
 	   #:counting-chars
 	   #:run-count-chars
-	   #:printing-quotes))
+	   #:printing-quotes
+	   #:madlib))
