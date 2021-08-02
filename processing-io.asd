@@ -2,7 +2,7 @@
   :version "0.2.1"
   :author "Jason Robinson"
   :license "BSD-3"
-  :depends-on ("iup")
+  :depends-on ("tecgraf-base" "pffft" "iup")
   :components ((:module "src"
                 :components
                 ((:file "packages")
