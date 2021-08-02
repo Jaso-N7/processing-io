@@ -6,14 +6,14 @@
 
 (defun greeting (greet)
   "Displays a greeting GREET."
-  (format nil "~A" greet))
+  (format t "~A" greet))
 
 (defun get-input-string ()
   (format t "~&What is the input string? ")
   (read-line))
 
 (defun set-output-string (str str-len)
-  (format nil "~A has ~A characters."
+  (format t "~A has ~A characters."
 	  str str-len))
 
 (defun get-quote-and-author ()
