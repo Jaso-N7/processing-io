@@ -17,8 +17,15 @@
 	  str str-len))
 
 (defun get-quote-and-author ()
-  (format t "~&What is the quote? ")
+  "Prompts for a quote and an author."
+(format t "~&What is the quote? ")
   (let ((quote (read-line)))
     (format t "Who said it? ")
     (let ((author (read-line)))
       (values quote author))))
+
+(defun display-quote (quote author)
+  "Display the quotation and author."
+  (format nil "~A says, ~S"
+	  author quote))
+  
