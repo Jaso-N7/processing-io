@@ -15,3 +15,10 @@
 (defun set-output-string (str str-len)
   (format nil "~A has ~A characters."
 	  str str-len))
+
+(defun get-quote-and-author ()
+  (format t "~&What is the quote? ")
+  (let ((quote (read-line)))
+    (format t "Who said it? ")
+    (let ((author (read-line)))
+      (values quote author))))
