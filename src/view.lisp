@@ -1,31 +1,20 @@
 (in-package :view)
 
-(defun get-name ()
-  (format t "~&What is your name? ")
+(defun display-prompt (message)
+  "Displays any prompts or questions in the form of MESSAGE and awaits user-input.
+Returns the user-input in the form of a string once the Enter/Return key is pressed."
+  (princ message)
   (read-line))
 
-(defun greeting (greet)
-  "Displays a greeting GREET."
-  (format t "~A" greet))
-
-(defun get-input-string ()
-  (format t "~&What is the input string? ")
-  (read-line))
-
-(defun set-output-string (str str-len)
-  (format t "~A has ~A characters."
-	  str str-len))
+(defun display-response (message)
+  "Displays the outcome or response in the form of MESSAGE to the user."
+  (progn
+    (princ message)
+    'end))
 
 (defun get-quote-and-author ()
   "Prompts for a quote and an author."
-(format t "~&What is the quote? ")
-  (let ((quote (read-line)))
-    (format t "Who said it? ")
-    (let ((author (read-line)))
-      (values quote author))))
-
-(defun display-quote (quote author)
-  "Display the quotation and author."
-  (format t "~A says, ~S"
-	  author quote))
+  (let* ((quote (display-prompt "What is the quote? "))
+	 (author (display-prompt "Who said it? ")))
+    (values quote author)))
   
