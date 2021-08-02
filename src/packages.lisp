@@ -18,5 +18,6 @@
   (:use :cl :model :view :iup)
   (:export #:saying-hello
 	   #:counting-chars
-	   #:run-count-chars)
+	   #:run-count-chars
+	   #:printing-quotes)
   (:documentation "Entry point for application. Displays the Views and handle events."))

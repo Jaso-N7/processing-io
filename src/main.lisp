@@ -13,3 +13,8 @@
 	(progn 
 	  (format t "You must enter something~%")
 	  (counting-chars)))))
+
+(defun printing-quotes ()
+  "Prompts for a quote and an author, then displays the quotation and author."
+  (multiple-value-bind (q a) (get-quote-and-author)
+    (display-quote q a)))

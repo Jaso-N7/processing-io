@@ -26,6 +26,6 @@
 
 (defun display-quote (quote author)
   "Display the quotation and author."
-  (format nil "~A says, ~S"
+  (format t "~A says, ~S"
 	  author quote))
   
