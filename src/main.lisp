@@ -1,8 +1,6 @@
 (in-package :processing-io)
 
 
-
-
 (defun saying-hello ()
   "Prompts a user for their name and displays a greeting."
 					;  (greeting (process-greeting (get-name))))
@@ -41,8 +39,8 @@ as a result."
 
 (defun simple-math ()
   (let* ((a-rand (is-number-p (display-prompt "What is the first number? ")))
-	 (b-rand (is-number-p (display-prompt "What is the first number? "))))
-    (cond ((zerop b-rand)
+	 (b-rand (is-number-p (display-prompt "What is the second number? "))))
+    (cond ((and (numberp b-rand) (zerop b-rand))
 	   (format t "Second number MUST be greater than zero(0)~%")
 	   (simple-math))
 	  ((and a-rand b-rand)
