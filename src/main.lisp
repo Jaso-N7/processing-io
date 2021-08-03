@@ -22,7 +22,7 @@
 (defun printing-quotes ()
   "Prompts for a quote and an author, then displays the quotation and author."
   (multiple-value-bind (q a) (get-quote-and-author)
-    (display-response (concatenate 'string a " says, " q))))
+    (display-response (format nil "~A says, ~S" a q))))
 
 (defun madlib ()
   "A simple game where you, or another player, construct a list of words and
