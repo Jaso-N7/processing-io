@@ -1,5 +1,5 @@
 (defsystem "processing-io"
-  :version "0.2.1"
+  :version "0.5.0"
   :author "Jason Robinson"
   :license "BSD-3"
   :depends-on ("tecgraf-base" "pffft" "iup")
