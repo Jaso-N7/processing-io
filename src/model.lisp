@@ -25,3 +25,14 @@ otherwise if NAME includes invalid characters."
 (defun process-input-string (str)
   "Determines the length of the input string STR."
   (length str))
+
+(defun is-number-p (num)
+  "Test if an input string NUM is a number, if it is, then converts it from string; Otherwise returns NIL."
+  (when (every #'digit-char-p num)
+    (parse-integer num)))
+
+(defun math-simplified (a b)
+  (values (+ a b)
+	   (- a b)
+	   (* a b)
+	   (/ a b)))

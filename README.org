@@ -2,13 +2,16 @@
 
 ** Introduction
    
-   Getting acquainted with how to get input from the user and process it to produce output.
+Getting acquainted with how to get input from the user and process it to produce output.
 
 ** Usage
 
 `(saying-hello)`
 `(counting-chars)`
 `(run-count-chars) ; This runs the IUP GUI`
+`(printing-quotes)`
+`(madlib)`
+`(simple-math)`
 
 ** Installation
 Git clone this library to your `quicklisp\local-projects` directory.

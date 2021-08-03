@@ -2,7 +2,9 @@
   (:documentation "Processes all information.")
   (:use :cl)
   (:export #:process-greeting
-	   #:process-input-string))
+	   #:process-input-string
+	   #:is-number-p
+	   #:math-simplified))
 
 
 (defpackage view
@@ -18,7 +20,9 @@
   (:use :cl)
   (:import-from :model
 		#:process-greeting
-		#:process-input-string)
+		#:process-input-string
+		#:is-number-p
+		#:math-simplified)
   (:import-from :view
 		#:display-prompt
 		#:display-response
@@ -27,4 +31,5 @@
 	   #:counting-chars
 	   #:run-count-chars
 	   #:printing-quotes
-	   #:madlib))
+	   #:madlib
+	   #:simple-math))

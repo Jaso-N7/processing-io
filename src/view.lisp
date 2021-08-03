@@ -17,4 +17,9 @@ Returns the user-input in the form of a string once the Enter/Return key is pres
   (let* ((quote (display-prompt "What is the quote? "))
 	 (author (display-prompt "Who said it? ")))
     (values quote author)))
-  
+
+(defun ask-number (pos)
+  "Asks for a number and returns the corresponding input."
+  #'(lambda ()
+      (display-prompt (format nil "What is the ~A number? "
+					   pos))))
