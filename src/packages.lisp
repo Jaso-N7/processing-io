@@ -4,6 +4,7 @@
   (:export #:process-greeting
 	   #:process-input-string
 	   #:is-number-p
+	   #:numbers-minus-p
 	   #:math-simplified))
 
 
@@ -22,6 +23,7 @@
 		#:process-greeting
 		#:process-input-string
 		#:is-number-p
+		#:numbers-minus-p
 		#:math-simplified)
   (:import-from :view
 		#:display-prompt

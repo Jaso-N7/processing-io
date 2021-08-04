@@ -40,8 +40,11 @@ as a result."
 (defun simple-math ()
   (let* ((a-rand (is-number-p (display-prompt "What is the first number? ")))
 	 (b-rand (is-number-p (display-prompt "What is the second number? "))))
-    (cond ((and (numberp b-rand) (zerop b-rand))
-	   (format t "Second number MUST be greater than zero(0)~%")
+    (cond ((or (null a-rand) (null b-rand))
+	   (format t "Positive numbers required.~%")
+	   (simple-math))
+	  ((numbers-minus-p a-rand b-rand)
+	   (format t "Numbers MUST be greater than zero(0)~%")
 	   (simple-math))
 	  ((and a-rand b-rand)
 	   (multiple-value-bind (add min mul div) (math-simplified a-rand b-rand)
@@ -53,3 +56,8 @@ as a result."
 		      a-rand b-rand div))))
 	  (t (simple-math)))))
 
+
+
+
+
+	    
