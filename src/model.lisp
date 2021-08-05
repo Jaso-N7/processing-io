@@ -43,8 +43,7 @@ otherwise if NAME includes invalid characters."
 	    (<= number 0))
 	numbers))
 
-(defun math-simplified (a b)
-  (values (+ a b)
-	   (- a b)
-	   (* a b)
-	   (/ a b)))
+(defun add (a b) (+ a b))
+(defun sub (a b) (- a b))
+(defun mul (a b) (* a b))
+(defun div (a b) (/ a b))

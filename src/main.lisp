@@ -47,17 +47,10 @@ as a result."
 	   (format t "Numbers MUST be greater than zero(0)~%")
 	   (simple-math))
 	  ((and a-rand b-rand)
-	   (multiple-value-bind (add min mul div) (math-simplified a-rand b-rand)
-	     (display-response 
-	      (format nil "~A + ~A = ~A~%~A - ~A = ~A~%~A * ~A = ~A~%~A / ~A = ~A"
-		      a-rand b-rand add
-		      a-rand b-rand min
-		      a-rand b-rand mul
-		      a-rand b-rand div))))
+	   (display-response 
+	    (format nil "~A + ~A = ~A~%~A - ~A = ~A~%~A * ~A = ~A~%~A / ~A = ~A"
+		    a-rand b-rand (add a-rand b-rand) 
+		    a-rand b-rand (sub a-rand b-rand) 
+		    a-rand b-rand (mul a-rand b-rand) 
+		    a-rand b-rand (div a-rand b-rand))))
 	  (t (simple-math)))))
-
-
-
-
-
-	    

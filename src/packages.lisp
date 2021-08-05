@@ -5,7 +5,7 @@
 	   #:process-input-string
 	   #:is-number-p
 	   #:numbers-minus-p
-	   #:math-simplified))
+	   #:add #:sub #:mul #:div))
 
 
 (defpackage view
@@ -24,7 +24,7 @@
 		#:process-input-string
 		#:is-number-p
 		#:numbers-minus-p
-		#:math-simplified)
+		#:add #:sub #:mul #:div)
   (:import-from :view
 		#:display-prompt
 		#:display-response
