@@ -19,6 +19,15 @@
 	  (terpri)
 	  (counting-chars)))))
 
+(defun run-count-chars ()
+  "Main entry point to start the GUI version of `COUNTING-CHARS'."
+  #-sbcl
+  (count-chars)
+  #+sbcl
+  (sb-int:with-float-traps-masked
+      (:divide-by-zero :invalid)
+    (count-chars)))
+
 (defun printing-quotes ()
   "Prompts for a quote and an author, then displays the quotation and author."
   (multiple-value-bind (q a) (get-quote-and-author)

@@ -31,12 +31,5 @@ and the number of characters the string contains."
       (iup:show dialog)
       (iup:main-loop))))
 
-(defun run-count-chars ()
-  "Main entry point to start the GUI."
-  #-sbcl
-  (count-chars)
-  #+sbcl
-  (sb-int:with-float-traps-masked
-      (:divide-by-zero :invalid)
-    (count-chars)))
+
       
