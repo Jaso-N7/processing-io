@@ -28,7 +28,9 @@ otherwise if NAME includes invalid characters."
 
 (defun is-number-p (num)
   "Test if an input string NUM is a number, if it is, then converts it from string; Otherwise returns NIL."
-  (cond ((and (char= (char num 0) #\-)
+  (cond ((string= "" num)
+	 NIL)
+	((and (char= (char num 0) #\-)
 	      (every #'digit-char-p
 		     (subseq num 1)))
 	 (- (parse-integer (subseq num 1))))
