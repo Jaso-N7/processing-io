@@ -72,3 +72,31 @@ as a result."
   (sb-int:with-float-traps-masked
       (:divide-by-zero :invalid)
     (mixer)))
+
+(defun retirement-calculator ()
+  "Determines how many years you have left until retirement and the year you can retire.
+Prompts for your current age and the age you want to retire and display the output."
+  (let* ((current-age (is-number-p (display-prompt "What is your current age? ")))
+	 (retirement-age (is-number-p (display-prompt 
+				       "At what age would you like to retire? "))))
+    (cond ((or (null current-age)
+	       (null retirement-age)
+	       (numbers-minus-p current-age retirement-age))
+	   (format t "Please enter valid ages.")
+	   (retirement-calculator))
+	  ((and current-age retirement-age)
+	   (let* ((current-year 0)
+		  (years-to-retire 0)
+		  (retirement-year 0))
+	     (cond ((minusp years-to-retire)
+		    (display-response "You can already retire."))
+		   ((zerop years-to-retire)
+		    (display-response "Get ready for retirement!"))
+		   (t
+		    (display-response
+		     (format nil
+			     "~&You have ~A years left until you can retire.~%It's ~A, so you can retire in ~A.~%"
+			     years-to-retire current-year retirement-year))))))
+	  (t (retirement-calculator)))))
+			     
+		    

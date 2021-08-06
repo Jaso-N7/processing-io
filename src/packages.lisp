@@ -35,4 +35,5 @@
 	   #:printing-quotes
 	   #:madlib
 	   #:simple-math
-	   #:run-simple-maths))
+	   #:run-simple-maths
+	   #:retirement-calculator))
