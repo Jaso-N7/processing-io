@@ -1,30 +1,103 @@
 * Processing-Io  
 
 ** Introduction
-   
-Getting acquainted with how to get input from the user and process it to produce output.
+
+Utilizing the challenges from "Exercises for Programmers 57 Challenges to Develop your Coding Skills
+by Brian P. Hogan" to get acquainted with accepting input from the user, processing it and producing output
+in Common Lisp. 
+
+I opted to use the Model-View-Controller (MVC) approach in this challenge. The packages/files are named accordingly
+except the Controller. The controller package is ```processing-io``` and all the functions are in the ```main.lisp```
+file.
 
 ** Usage
 
-`(saying-hello)`
-`(counting-chars)`
-`(run-count-chars) ; This runs the IUP GUI`
-`(printing-quotes)`
-`(madlib)`
-`(simple-math)`
+These are the functions relating to the challenges:
+
+***  (saying-hello)
+Create a program that prompts for your name and prints
+a greeting using your name.
+
+**** Constraints 
+Completed
+
+**** Challenges
+TODO: Different greetings for different people.
+
+***  (counting-chars)
+Create a program that prompts for an input string and displays output that shows the input string and the number of
+characters the string contains.
+
+**** Constraints 
+Completed
+
+**** Challenges
+Completed - see (RUN-COUNT-CHARS)
+
+*** (run-count-chars) 
+Same as (COUNTING-CHARS), except this will start a Graphical User Interface (GUI) built with IUP.
+
+TODO: Attempt a web-based version of this solution.
+
+*** (printing-quotes)
+Create a program that prompts for a quote and an author.
+Display the quotation and author as shown in the example
+output.
+
+**** Constraints 
+Completed
+
+**** Challenges
+Completed
+
+*** (madlib)
+Create a simple mad-lib program that prompts for a noun,
+a verb, an adverb, and an adjective and injects those into a
+story that you create.
+
+**** Constraints 
+Completed
+
+**** Challenges
+Incomplete
+
+*** (simple-math)
+Write a program that prompts for two numbers. Print the
+sum, difference, product, and quotient of those numbers .
+
+**** Constraints 
+Completed
+
+**** Challenges
+Completed - See also (RUN-SIMPLE-MATHS)
+
+*** (run-simple-maths)
+GUI version of SIMPLE-MATH. Would be interesting to try as a web-based version.
+
+*** (retirement-calculator)
+A program that determines how many years you have
+left until retirement and the year you can retire. It should
+prompt for your current age and the age you want to retire
+and display the output.
+
+**** Constraints 
+Completed
+
+**** Challenges
+Completed
 
 ** Installation
-Git clone this library to your `quicklisp\local-projects` directory.
+Git clone this library to your ```quicklisp\local-projects``` directory.
 
 Running the Graphical Interface requires IUP. This project uses the CL libray from [[https://github.com/lispnik/iup/][lispnik/iup]].
 Just follow the instructions from there, and once they are cloned to the 
 quicklisp/local-projects directory.
 
-`CL-USER> (ql:quickload '("tecgraf-base" "pffft" "iup" "processing-io"))`
-`CL-USER> (use-package :processing-io)`
+```CL-USER> (ql:quickload '("tecgraf-base" "pffft" "iup" "processing-io"))```
+```CL-USER> (use-package :processing-io)```
 
 *** Testing the system
-`CL-USER> (asdf:test-system "processing-io")`
+```CL-USER> (asdf:test-system "processing-io")```
 
 ** Author
 
