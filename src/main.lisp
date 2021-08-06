@@ -63,3 +63,12 @@ as a result."
 		    a-rand b-rand (mul a-rand b-rand) 
 		    a-rand b-rand (div a-rand b-rand))))
 	  (t (simple-math)))))
+
+(defun run-simple-maths ()
+  "Starts the GUI program for doing simple mathematics."
+  #-sbcl
+  (simple-calc)
+  #+sbcl
+  (sb-int:with-float-traps-masked
+      (:divide-by-zero :invalid)
+    (mixer)))

@@ -34,4 +34,5 @@
 	   #:run-count-chars
 	   #:printing-quotes
 	   #:madlib
-	   #:simple-math))
+	   #:simple-math
+	   #:run-simple-maths))
