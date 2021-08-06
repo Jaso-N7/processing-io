@@ -5,7 +5,8 @@
 	   #:process-input-string
 	   #:is-number-p
 	   #:numbers-minus-p
-	   #:add #:sub #:mul #:div))
+	   #:add #:sub #:mul #:div
+	   #:get-current-year))
 
 
 (defpackage view
@@ -24,7 +25,8 @@
 		#:process-input-string
 		#:is-number-p
 		#:numbers-minus-p
-		#:add #:sub #:mul #:div)
+		#:add #:sub #:mul #:div
+		#:get-current-year)
   (:import-from :view
 		#:display-prompt
 		#:display-response

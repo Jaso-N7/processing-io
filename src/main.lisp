@@ -85,9 +85,9 @@ Prompts for your current age and the age you want to retire and display the outp
 	   (format t "Please enter valid ages.")
 	   (retirement-calculator))
 	  ((and current-age retirement-age)
-	   (let* ((current-year 0)
-		  (years-to-retire 0)
-		  (retirement-year 0))
+	   (let* ((current-year (get-current-year))
+		  (years-to-retire (- retirement-age current-age))
+		  (retirement-year (+ current-year years-to-retire)))
 	     (cond ((minusp years-to-retire)
 		    (display-response "You can already retire."))
 		   ((zerop years-to-retire)
@@ -98,5 +98,3 @@ Prompts for your current age and the age you want to retire and display the outp
 			     "~&You have ~A years left until you can retire.~%It's ~A, so you can retire in ~A.~%"
 			     years-to-retire current-year retirement-year))))))
 	  (t (retirement-calculator)))))
-			     
-		    

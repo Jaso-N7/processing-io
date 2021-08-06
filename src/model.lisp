@@ -49,3 +49,9 @@ otherwise if NAME includes invalid characters."
 (defun sub (a b) (- a b))
 (defun mul (a b) (* a b))
 (defun div (a b) (/ a b))
+
+(defun get-current-year ()
+  "Returns the current year in the YYYY format."
+  (multiple-value-bind (s m h d mth year) (get-decoded-time)
+    (declare (ignore s m h d mth))
+    year))
